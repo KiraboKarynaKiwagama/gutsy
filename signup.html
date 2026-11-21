@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign up – The Gutsy Bunch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Outfit:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header><nav><a href="index.html"><img src="images/logo.png" alt="Gutsy – Run. Live. Laugh."></a>
+<button id="burger" aria-label="Menu">☰</button><div class="links" id="links"><a href="index.html">Home</a><a href="runs.html">Runs</a><a href="signup.html" class="on">Sign up</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="shop.html">Kit</a><a href="faq.html">FAQ</a></div></nav></header>
+<section id="join"><h2>Join the Bunch</h2><p class="lead">Fill in the form and sign the waiver. It opens WhatsApp so you can send it to the club.</p>
+<div class="two"><form id="joinf"><label>Full name<input name="n" required></label><label>Phone (WhatsApp)<input name="p" type="tel" required></label>
+<label>Usual pace<select name="pc"><option>Easy 7:00+/km</option><option>Steady 6:00/km</option><option>Quick 5:00/km</option><option>Fast</option><option>Not sure yet</option></select></label>
+<label>Emergency contact<input name="e" required></label>
+<div class="waiver">I understand running carries a risk of injury. I am fit to take part, I run at my own risk, and I will follow the club’s safety rules. I agree to group photos being used on the club’s channels. <i>(Replace with the club’s approved waiver.)</i></div>
+<label class="chk"><input type="checkbox" required> I accept the waiver.</label>
+<label>Type your name as signature<input name="s" required></label>
+<button class="sign-btn" type="submit">Sign and join</button><div class="ok" id="ok">Done. WhatsApp should open. Send the message to finish.</div></form>
+<div class="card"><h3>Annual dues</h3><p>Set your amount here, for example UGX 50,000 a year. Pay by MTN MoMo or Airtel Money to the club treasurer, with your name as the reference.</p><p class="note">For card payments, add a Flutterwave or Pesapal checkout link.</p></div></div></section><section><h2>Partners and volunteers</h2><div class="two"><div class="card"><h3>Friends of the club</h3><p>Add your running shop, physio or café here, plus the perk members get.</p></div>
+<form id="volf"><h3>Lead a group or staff a water point</h3><label>Name<input name="n" required></label><label>Role<select name="r"><option>Pace group leader</option><option>Sweeper</option><option>Water station</option></select></label><button class="btn" type="submit">Volunteer</button></form></div></section>
+<footer><div class="in"><div><h3 style="font-size:1.8rem">The Gutsy Bunch</h3><p style="color:#9db0c0">Naalya, Kampala, Uganda</p></div>
+<div><p style="margin:0 0 .6rem">Follow and chat with us</p><div class="soc" id="soc"></div></div></div></footer>
+<script src="js/config.js"></script><script src="js/common.js"></script><script src="js/signup.js"></script></body></html>

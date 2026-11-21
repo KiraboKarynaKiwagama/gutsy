@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery – The Gutsy Bunch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Outfit:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header><nav><a href="index.html"><img src="images/logo.png" alt="Gutsy – Run. Live. Laugh."></a>
+<button id="burger" aria-label="Menu">☰</button><div class="links" id="links"><a href="index.html">Home</a><a href="runs.html">Runs</a><a href="signup.html">Sign up</a><a href="events.html">Events</a><a href="gallery.html" class="on">Gallery</a><a href="shop.html">Kit</a><a href="faq.html">FAQ</a></div></nav></header>
+<section id="photos"><h2>Gallery</h2><p class="lead">Tap a photo to see it bigger.</p>
+<div class="gtools" id="gf"></div><div class="gal" id="gal"></div>
+<p class="note">To show your photos: copy them into the <b>images</b> folder, then list them in the PHOTOS list in this file. “Add photos” previews pictures from your device but doesn’t save them.</p>
+<input type="file" id="up" accept="image/*" multiple hidden></section><div id="lb" role="dialog" aria-label="Photo viewer"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous">‹</button><div class="st" id="lbc"></div><button class="nx" aria-label="Next">›</button></div>
+
+<footer><div class="in"><div><h3 style="font-size:1.8rem">The Gutsy Bunch</h3><p style="color:#9db0c0">Naalya, Kampala, Uganda</p></div>
+<div><p style="margin:0 0 .6rem">Follow and chat with us</p><div class="soc" id="soc"></div></div></div></footer>
+<script src="js/config.js"></script><script src="js/common.js"></script><script src="js/gallery.js"></script></body></html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home – The Gutsy Bunch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Outfit:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header><nav><a href="index.html"><img src="images/logo.png" alt="Gutsy – Run. Live. Laugh."></a>
+<button id="burger" aria-label="Menu">☰</button><div class="links" id="links"><a href="index.html" class="on">Home</a><a href="runs.html">Runs</a><a href="signup.html">Sign up</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="shop.html">Kit</a><a href="faq.html">FAQ</a></div></nav></header>
+
+<div class="landing">
+  <section class="hero" id="top">
+    <div>
+      <h1>Run. Live. <em>Laugh.</em></h1>
+      <p class="lead" style="margin-top:1.2rem">A friendly running club in Naalya, Kampala. Three runs a week, every pace welcome, and nobody gets left behind.</p>
+      <a class="btn" href="signup.html">Join the Bunch</a> <a class="btn soft" href="runs.html">See the runs</a>
+    </div>
+    <div class="next" aria-live="polite"><span class="pill">Next run</span><div class="when" id="nx-day">…</div><div class="cd" id="nx-cd"></div><p id="nx-place" style="margin:.6rem 0 0;color:var(--mute)"></p></div>
+  </section>
+</div>
+
+<section><h2>Life in the Bunch</h2><p class="lead">A peek at what you’ll find in our gallery.</p>
+<div class="snaps" id="snap"></div>
+<p style="text-align:center;margin-top:2.5rem"><a class="btn" href="gallery.html">See all photos</a></p></section>
+
+<section><h2>Explore</h2><div class="quick">
+<a class="card" href="runs.html"><h3>Runs and routes</h3><p>Times, pace groups, maps and a pace calculator.</p></a>
+<a class="card" href="signup.html"><h3>Sign up</h3><p>Join the club, sign the waiver, volunteer.</p></a>
+<a class="card" href="events.html"><h3>Events</h3><p>Races and club dates, with add to calendar.</p></a>
+<a class="card" href="gallery.html"><h3>Gallery</h3><p>Photos from our runs.</p></a>
+<a class="card" href="shop.html"><h3>Club kit</h3><p>Singlets, caps and tees.</p></a>
+<a class="card" href="faq.html"><h3>First time?</h3><p>Questions answered, and our safety rules.</p></a></div></section>
+<section><h2>The Bunch in numbers</h2><p class="lead">Who we are and how far we go together.</p>
+<div class="stats">
+<div><b><span class="count" data-to="100">0</span></b><h3>Runners</h3><p>A growing family of beginners, weekend joggers and seasoned racers who show up and run together.</p></div>
+<div><b><span class="count" data-to="1000">0</span> <small>km</small></b><h3>Kilometres a week</h3><p>The total distance the whole club covers together in a single week.</p></div>
+<div><b><span class="count" data-to="10">0</span></b><h3>International marathons</h3><p>Marathons our members have taken on around the world, carrying the Gutsy colours.</p></div>
+</div></section>
+<section><h2>News</h2><div class="news" id="news"></div></section>
+<footer><div class="in"><div><h3 style="font-size:1.8rem">The Gutsy Bunch</h3><p style="color:#9db0c0">Naalya, Kampala, Uganda</p></div>
+<div><p style="margin:0 0 .6rem">Follow and chat with us</p><div class="soc" id="soc"></div></div></div></footer>
+<script src="js/config.js"></script><script src="js/common.js"></script><script src="js/home.js"></script></body></html>

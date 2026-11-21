@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Runs – The Gutsy Bunch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Outfit:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header><nav><a href="index.html"><img src="images/logo.png" alt="Gutsy – Run. Live. Laugh."></a>
+<button id="burger" aria-label="Menu">☰</button><div class="links" id="links"><a href="index.html">Home</a><a href="runs.html" class="on">Runs</a><a href="signup.html">Sign up</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="shop.html">Kit</a><a href="faq.html">FAQ</a></div></nav></header>
+<div class="banner"><div class="next"><span class="pill">Next run</span><span class="when" id="nx-day"></span><span class="cd" id="nx-cd"></span><span id="nx-place" style="color:var(--mute)"></span></div></div><section id="runs"><h2>Weekly runs</h2><p class="lead">Pick a day to see where we meet.</p>
+<div class="tabs" role="tablist" id="rtabs"></div><div class="panel" id="rpanel"></div>
+<h3 style="margin:2.4rem 0 .8rem">Find your pace group</h3>
+<div class="tabs" id="gtabs"></div><div class="panel" id="gpanel"></div>
+<p class="note">Pace groups are placeholders. Edit the GROUPS list near the bottom of this file.</p></section><section id="routes"><h2>Routes</h2><p class="lead">See where we run, how hilly it is, and download the GPX for your watch.</p>
+<div class="routes">
+<div class="card"><div class="map">Paste your Strava, Ride with GPS or MapMyRun embed here<br>Naalya loop</div>
+<svg class="elev" viewBox="0 0 300 60" preserveAspectRatio="none" role="img" aria-label="Elevation profile"><path d="M0 45C30 40 50 20 80 25S130 50 160 35 230 8 260 22 290 40 300 38V60H0Z" fill="#2a7ab8" opacity=".7"/></svg>
+<span class="tag">Road</span> 5 km · rolling · <a href="#" onclick="return alert('Link your GPX file here')">Download GPX</a></div>
+<div class="card"><div class="map">Paste your second route embed here<br>Saturday long run</div>
+<svg class="elev" viewBox="0 0 300 60" preserveAspectRatio="none" role="img" aria-label="Elevation profile"><path d="M0 40C40 10 70 50 110 30S190 5 230 30 280 50 300 20V60H0Z" fill="#2a7ab8" opacity=".7"/></svg>
+<span class="tag">Road + murram</span> 12 km · hilly · <a href="#" onclick="return alert('Link your GPX file here')">Download GPX</a></div></div></section><section><h2>Pace calculator</h2><div class="pace"><label>Distance (km)<input id="pd" type="number" step=".1" value="5"></label><label>Time (min)<input id="pt" type="number" step=".1" value="30"></label><button class="btn" id="pb">Work it out</button></div><div id="pout"></div></section>
+<footer><div class="in"><div><h3 style="font-size:1.8rem">The Gutsy Bunch</h3><p style="color:#9db0c0">Naalya, Kampala, Uganda</p></div>
+<div><p style="margin:0 0 .6rem">Follow and chat with us</p><div class="soc" id="soc"></div></div></div></footer>
+<script src="js/config.js"></script><script src="js/common.js"></script><script src="js/runs.js"></script></body></html>

@@ -1,0 +1,228 @@
+/* ==========================================================
+   THE GUTSY BUNCH: STYLE FILE
+   Save as: gutsy-site/css/style.css
+
+   WHAT'S IN HERE (search for the number to jump to a section)
+    1. Colours and sizes (change the look of the whole site here)
+    2. Page basics: text, headings, links, spacing
+    3. Buttons
+    4. Top menu (header)
+    5. Home page: big heading and "Next run" card
+    6. Runs page: day tabs, pace groups, maps
+    7. Cards (the white boxes used all over)
+    8. First-timer questions (FAQ)
+    9. Forms: sign up, waiver, shop, volunteer
+   10. Events list
+   11. Stats boxes
+   12. Photo gallery and full-screen viewer
+   13. News
+   14. Shop items
+   15. Safety rules and pace calculator
+   16. Footer and social icons
+   17. Home and Runs page extras
+   18. Phones (small screens)
+   19. Accessibility
+   ========================================================== */
+
+
+/* ---------- 1. COLOURS AND SIZES ----------
+   Change a colour here and it changes everywhere. */
+:root{
+  --ink:#17293a;    /* main text, dark navy */
+  --mute:#5d7081;   /* softer grey text */
+  --blue:#2a7ab8;   /* club blue (from the logo) */
+  --tint:#eaf3fb;   /* very light blue backgrounds */
+  --sun:#ffc93c;    /* yellow highlights */
+  --line:#e3ebf2;   /* thin borders */
+  --r:20px;         /* how round the corners are */
+}
+
+
+/* ---------- 2. PAGE BASICS ---------- */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:#fff;color:var(--ink);font:17px/1.65 Nunito,system-ui,sans-serif}   /* white page, Nunito text */
+h1,h2,h3{font-family:Outfit,sans-serif;margin:0;line-height:1.1;font-weight:700}             /* Outfit headings */
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:.6rem}
+h3{font-size:1.25rem}
+section{max-width:1080px;margin:auto;padding:4rem 1.2rem}   /* every page block */
+.lead{color:var(--mute);max-width:56ch;margin:0 0 1.6rem}   /* grey intro line under a heading */
+.note{font-size:.88rem;color:var(--mute)}                   /* small grey notes */
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+
+
+/* ---------- 3. BUTTONS ----------
+   .btn       = normal blue button
+   .btn.soft  = pale blue button
+   .btn.sun   = yellow button
+   .sign-btn  = bigger button (use class="sign-btn" in your HTML)
+   FIXED: your version had "font:sans-serif" (not valid, so the browser ignored it)
+   and a comma in .sign-btn where a semicolon belongs (which cancelled the font size). */
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--blue);color:#fff;border:0;padding:.75rem 1.5rem;font:700 1rem Nunito,sans-serif;border-radius:99px;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.sign-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--blue);color:#fff;border:0;padding:12px 24px;font:700 20px Nunito,sans-serif;border-radius:99px;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover,.sign-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #2a7ab833}   /* lifts when you hover */
+.btn.soft{background:var(--tint);color:var(--blue)}
+.btn.sun{background:var(--sun);color:var(--ink)}
+
+
+/* ---------- 4. TOP MENU ---------- */
+header{position:sticky;top:0;z-index:30;background:#fffffff0;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{max-width:1080px;margin:auto;display:flex;align-items:center;gap:1rem;padding:.5rem 1.2rem}
+nav img{height:45px;width:auto;flex-shrink:0;max-width:none}   /* LOGO SIZE: change 120px (leave width on auto) */
+nav .links{display:flex;gap:1.4rem;margin-left:auto;font-weight:600}
+nav .links a{color:var(--ink);text-decoration:none}
+nav .links a:hover{color:var(--blue)}
+.links a.on{color:var(--blue);border-bottom:2px solid var(--blue)}   /* the page you are on */
+#burger{display:none;margin-left:auto;background:var(--tint);border:0;border-radius:12px;padding:.5rem .8rem;font-size:1.2rem;cursor:pointer}   /* ☰ button, phones only */
+
+
+/* ---------- 5. HOME PAGE: HERO AND "NEXT RUN" CARD ---------- */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center;padding-top:3.5rem}
+.hero h1{font-size:clamp(3rem,8vw,5.4rem);letter-spacing:-1px}
+.hero h1 em{font-style:normal;color:var(--blue)}             /* the blue word "Laugh." */
+.next{background:var(--tint);border-radius:28px;padding:2rem;position:relative}
+.next .when{font:700 2.2rem Outfit;margin:.3rem 0}
+.next .cd{font:700 1.5rem Outfit;color:var(--blue)}          /* countdown numbers */
+.pill{display:inline-block;background:#fff;border-radius:99px;padding:.2rem .9rem;font-weight:800;font-size:.9rem;color:var(--blue)}
+
+/* ---------- LANDING PICTURE (Midnight Runners style) ----------
+   Full-width photo behind the hero, dark overlay, white text.
+   Needs images/hero.png and <div class="landing"> around the hero in index.html.
+   The photo stays fixed while you scroll. To make it scroll normally, delete the word "fixed" below.
+   Darker overlay: raise .35 and .7. Lighter: lower them. */
+.landing{background:linear-gradient(rgba(12,27,42,.55),rgba(12,27,42,.55)),url("../images/hero.png") center/cover no-repeat fixed;min-height:88vh;display:flex;align-items:center}
+.landing .hero{width:100%}
+.landing h1{color:#fff}
+.landing h1 em{color:var(--sun)}
+.landing .lead{color:#e8f0f6}
+
+
+/* ---------- 6. RUNS PAGE: TABS AND PANELS ---------- */
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{border:2px solid var(--line);background:#fff;border-radius:99px;padding:.5rem 1.2rem;font:700 1rem Nunito;cursor:pointer;color:var(--ink)}
+.tab[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}   /* the chosen tab */
+.panel{background:var(--tint);border-radius:var(--r);padding:1.6rem;min-height:130px}
+.panel h3{font-size:1.6rem;margin-bottom:.3rem}
+.routes,.two{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}   /* two columns side by side */
+.map{aspect-ratio:16/10;border-radius:14px;background:var(--tint);display:grid;place-items:center;text-align:center;color:var(--mute);padding:1rem}
+.elev{width:100%;height:56px;display:block;margin:.6rem 0}                /* elevation graph */
+.tag{background:var(--sun);border-radius:99px;padding:.1rem .7rem;font-size:.85rem;font-weight:800}   /* "Road" label */
+
+
+/* ---------- 7. CARDS ---------- */
+.card{border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;box-shadow:0 6px 24px #17293a0d}
+
+
+/* ---------- 8. FIRST-TIMER QUESTIONS ---------- */
+details{border:1px solid var(--line);border-radius:16px;padding:.9rem 1.2rem;margin-bottom:.7rem;transition:background .2s}
+details[open]{background:var(--tint)}
+summary{font:700 1.15rem Outfit;cursor:pointer}
+
+
+/* ---------- 9. FORMS ---------- */
+form{display:grid;gap:.9rem}
+label{font-weight:700;font-size:.95rem;display:grid;gap:.25rem}
+input,select{font:inherit;padding:.7rem 1rem;border:2px solid var(--line);border-radius:14px;width:100%;background:#fff;color:var(--ink)}
+input:focus,select:focus{border-color:var(--blue);outline:0}
+.waiver{max-height:130px;overflow:auto;background:var(--tint);border-radius:14px;padding:.9rem;font-size:.92rem}   /* scrolling waiver text */
+.chk{display:flex;gap:.6rem;align-items:flex-start;font-weight:400}
+.chk input{width:auto;margin-top:.45rem}                      /* tick box */
+.ok{display:none;background:var(--sun);border-radius:14px;padding:.8rem}   /* "Done" message */
+
+
+/* ---------- 10. EVENTS LIST ---------- */
+.ev{display:grid;grid-template-columns:76px 1fr auto;gap:1rem;align-items:center;padding:.9rem 0;border-top:1px solid var(--line)}
+.ev .dt{background:var(--tint);border-radius:16px;text-align:center;padding:.5rem 0;font:700 1.7rem/1 Outfit;color:var(--blue)}   /* date box */
+.ev .dt small{display:block;font:700 .8rem Nunito}
+
+
+/* ---------- 11. STATS BOXES ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.stats div{background:var(--blue);color:#fff;border-radius:var(--r);padding:4rem 1.4rem}
+.stats b{display:block;font:700 5rem/1 Outfit; text-align:center;margin-bottom:.4rem}
+.stats small{font-size:1.4rem}
+.stats h3{color:#fff;margin: 0.7rem 0.3rem}
+.stats p{margin:0;color:#cdddec;font-size:.95rem;line-height:1.5}   /* the little explanation */
+
+/* ---------- 12. PHOTO GALLERY AND VIEWER ---------- */
+.gtools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}   /* filter buttons row */
+.gtools .btn{margin-left:auto}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.8rem}   /* photo grid; 210px = smallest photo width */
+.gal figure{margin:0;aspect-ratio:1;border-radius:var(--r);overflow:hidden;position:relative;background:var(--tint);cursor:zoom-in;display:grid;place-items:center;color:var(--blue);text-align:center;font-weight:700;padding:1rem}
+.gal figure:nth-child(5n+1){background:#d6e8f6}                       /* colours of empty photo slots */
+.gal figure:nth-child(5n+3){background:#fff4cc;color:#8a6a00}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal figure:hover img{transform:scale(1.06)}                         /* photo zooms on hover */
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:.6rem .8rem;color:#fff;background:linear-gradient(transparent,#000a);font-size:.9rem;text-align:left;opacity:0;transition:opacity .2s}
+.gal figure:hover figcaption{opacity:1}                              /* caption shows on hover */
+/* full-screen viewer */
+#lb{position:fixed;inset:0;background:#0c1b2af2;z-index:50;display:none;place-items:center;padding:1rem}
+#lb.on{display:grid}
+#lb .st{max-width:900px;width:100%;text-align:center;color:#fff}
+#lb img{max-width:100%;max-height:72vh;border-radius:16px}
+#lb .ph{background:var(--tint);color:var(--blue);border-radius:16px;padding:5rem 1rem;font:700 1.4rem Outfit}
+#lb button{position:absolute;background:#fff2;color:#fff;border:0;border-radius:50%;width:48px;height:48px;font-size:1.5rem;cursor:pointer}
+#lb .x{top:1rem;right:1rem}                                          /* close */
+#lb .pv{left:1rem;top:50%}                                           /* previous */
+#lb .nx{right:1rem;top:50%}                                          /* next */
+
+
+/* ---------- 13. NEWS ---------- */
+.news article{display:grid;grid-template-columns:90px 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.news time{color:var(--mute);font-weight:700}
+
+
+/* ---------- 14. SHOP ---------- */
+.shop{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.shop .card{cursor:pointer;text-align:center;transition:transform .2s,border-color .2s}
+.shop .card:hover,.shop .card.sel{transform:translateY(-4px);border-color:var(--blue)}   /* hovered or chosen item */
+.shop svg{width:100%;height:100px}
+
+
+/* ---------- 15. SAFETY RULES AND PACE CALCULATOR ---------- */
+.rules{columns:2;column-gap:2.5rem;padding-left:1.2rem}
+.rules li{margin-bottom:.7rem;break-inside:avoid}
+.pace{display:flex;gap:1rem;flex-wrap:wrap;align-items:end}
+.pace label{flex:1;min-width:120px}
+#pout{font:700 1.8rem Outfit;color:var(--blue);margin-top:.8rem}   /* calculator answer */
+
+
+/* ---------- 16. FOOTER AND SOCIAL ICONS ---------- */
+footer{background:var(--ink);color:#fff;padding:3rem 1.2rem}
+footer .in{max-width:1080px;margin:auto;display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between}
+.soc{display:flex;gap:.6rem;flex-wrap:wrap}
+.soc a{width:46px;height:46px;border-radius:50%;background:#ffffff1a;display:grid;place-items:center;transition:background .2s,transform .2s}
+.soc a:hover{background:var(--sun);transform:translateY(-3px)}
+.soc a:hover svg{stroke:var(--ink)}
+.soc svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+
+/* ---------- 17. HOME AND RUNS PAGE EXTRAS ---------- */
+/* "Next run" strip at the top of the Runs page */
+.banner{max-width:1080px;margin:1.5rem auto 0;padding:0 1.2rem}
+.banner .next{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;padding:1rem 1.5rem;border-radius:20px}
+.banner .when{font-size:1.5rem;margin:0}
+/* "Explore" boxes on the Home page */
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.quick a{text-decoration:none;color:var(--ink);transition:transform .2s,border-color .2s}
+.quick a:hover{transform:translateY(-4px);border-color:var(--blue)}
+.quick p{margin:.4rem 0 0;color:var(--mute)}
+
+
+/* ---------- 18. PHONES (screens under 780px wide) ---------- */
+@media(max-width:780px){
+  .hero,.routes,.two{grid-template-columns:1fr}              /* two columns become one */
+  .rules{columns:1}
+  .ev{grid-template-columns:64px 1fr}
+  .ev .btn{grid-column:2}
+  #burger{display:block}                                     /* show the ☰ button */
+  nav .links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1rem 1.4rem;border-bottom:1px solid var(--line);margin:0}
+  nav .links.on{display:flex}                                /* menu open */
+  .landing{background-attachment:scroll;min-height:80vh}     /* photo scrolls normally on phones */
+}
+
+
+/* ---------- 19. ACCESSIBILITY ---------- */
+/* Switches off animations for people whose device asks for less motion */
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
