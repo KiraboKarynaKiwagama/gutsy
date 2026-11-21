@@ -7,3 +7,7 @@ document.querySelectorAll(".count").forEach(el=>{
   if(matchMedia("(prefers-reduced-motion:reduce)").matches||!("IntersectionObserver" in window)){el.textContent=to.toLocaleString();return}
   new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){run();o.disconnect()}},{threshold:.5}).observe(el);
 });
+
+// Home page photos: the first 3 gallery photos (empty slots fill in if you have fewer)
+const snapPics=[...PHOTOS.filter(p=>p[0]),...PHOTOS.filter(p=>!p[0])].slice(0,3);
+$("#snap").innerHTML=snapPics.map(p=>`<a class="snap" href="gallery.html"><div class="ph">${p[0]?`<img src="${p[0]}" alt="${p[1]}">`:"Photo coming soon"}</div><span>${p[1]}</span></a>`).join("");

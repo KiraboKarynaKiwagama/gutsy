@@ -14,6 +14,14 @@ const RUNS=[["Tuesday",2,18,"6:00 PM","Oryx Petrol Station, Naalya","After-work 
 const GROUPS=[["Easy","7:00+/km","No-drop. A leader finishes with the last runner. Start here if you’re new."],["Steady","6:00/km","5 to 8 km at a conversational pace."],["Quick","5:00/km","8 to 12 km with a pacer."],["Fast","under 4:30/km","Structured sessions on Tuesday and Thursday."]];
 const EVENTS=[["2026-12-13","Club time trial, 5 km","Naalya"],["2027-01-17","Targeted race (TBC)","Kampala"],["2027-02-07","Track night and social","TBC"]];
 // PHOTOS: ["images/your-photo.jpg","Caption","Category"]. Leave "" for an empty slot.
-const PHOTOS=[["","Saturday long run","Runs"],["","Rain run","Runs"],["","StanChartKE","Races"],["","Eid Run","Social"],["","Post-run coffee","Social"],["","Comrades","Races"],["","Tuesday session","Runs"],["","Team photo","Social"]];
+const PHOTOS=[
+    ["images/saturday-run.png","Saturday run","Runs"],
+    ["images/long-runs.png","Long run","Runs"],
+    ["images/tusker-run.png","Tuskerlight Run","Races"],
+    ["images/cancer-run.png","Rotary Cancer Run","Causes"],
+    ["images/international-run.png","International Run","Races"],
+    ["","Comrades","Races"],
+    ["","Tuesday session","Runs"],
+    ["","Team photo","Social"]];
 const NEWS=[["21 Nov","Welcome to our new site","Runs continue as normal: Tuesday and Thursday 6 PM, Saturday 6 AM."],["Sample","Weather policy","Cancellations are posted in WhatsApp."]];
 /* ===== END EDIT ===== */
