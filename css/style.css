@@ -241,7 +241,7 @@ h3 .ico{vertical-align:-4px;margin-right:.5rem}
 .snap:nth-child(2){transform:rotate(3deg) translateY(18px)}    /* photo 2, tilted and nudged down */
 .snap:nth-child(3){transform:rotate(-2deg)}                    /* photo 3 */
 .snap:hover{transform:rotate(0) scale(1.05);position:relative;z-index:2}   /* straightens on hover */
-
+#addp{display:none}
 /* ---------- 18. PHONES (screens under 780px wide) ---------- */
 @media(max-width:780px){
   .hero,.routes,.two{grid-template-columns:1fr}              /* two columns become one */
@@ -272,6 +272,19 @@ h3 .ico{vertical-align:-4px;margin-right:.5rem}
 .pay b{font:700 1.5rem Outfit,sans-serif}
 .pay small{color:var(--mute)}
 .pay .btn{margin-top:.6rem;justify-self:start;padding:.5rem 1.1rem;font-size:.9rem}
+
+/* Events: poster cards */
+.evc{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:1.6rem;align-items:center;padding:1.2rem;margin-bottom:1.4rem;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 6px 24px #17293a0d;background:#fff}
+.evc:nth-child(even){grid-template-columns:1fr minmax(220px,340px)}
+.evc:nth-child(even) .evc-poster{order:2}
+.evc-poster{border-radius:14px;overflow:hidden;background:var(--tint);min-height:200px;display:grid;place-items:center;color:var(--blue);font-weight:700;text-align:center}
+.evc-poster img{width:100%;display:block}
+.evc-info h3{font-size:1.7rem;margin-bottom:.8rem}
+.evc-info ul{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;gap:.6rem}
+.evc-info li{display:flex;align-items:center;gap:.7rem;font-weight:600}
+.evc-btns{display:flex;gap:.6rem;flex-wrap:wrap}
+.evc.past{opacity:.6}
+@media(max-width:780px){.evc,.evc:nth-child(even){grid-template-columns:1fr}.evc:nth-child(even) .evc-poster{order:0}}
 
 /* ---------- 19. ACCESSIBILITY ---------- */
 /* Switches off animations for people whose device asks for less motion */

@@ -15,7 +15,16 @@ const GROUPS=[["Easy","7:00+/km","No-drop. A leader finishes with the last runne
 ["Steady","6:00/km","5 to 8 km at a conversational pace.","5 to 8 km","Regulars building fitness"],
 ["Quick","5:00/km","8 to 12 km with a pacer.","8 to 12 km","Runners training for 10K or half marathon"],
 ["Fast","under 4:30/km","Structured sessions on Tuesday and Thursday.","8 to 12 km","Racers chasing times"]];
-const EVENTS=[["2026-12-13","Club time trial, 5 km","Naalya"],["2027-01-17","Targeted race (TBC)","Kampala"],["2027-02-07","Track night and social","TBC"]];
+const EVENTS=[
+ {poster:"images/events/half-marathon-2027.jpeg", name:"Gutsy Half Marathon 2027", date:"2027-01-23", time:"", place:"Metroplex, Naalya", link:"https://bit.ly/3X5L7Cn", linkText:"Register now",
+  extra:[["Race fee","UGX 70,000"]]},
+ {poster:"images/events/end-of-year-dinner.jpeg", name:"End-of-Year Dinner", date:"2026-12-12", time:"", place:"Kabira Country Club", link:"https://wa.me/256782048520", linkText:"RSVP on WhatsApp",
+  extra:[["Per person","UGX 150,000"],["Pay by","Sunday, 6 December"],["Dress code","Casual, all white"],["RSVP","+256 782 048 520"],["Airtel Money","dial *185#, merchant code 4381410"],["MTN MoMo","merchant code 749391"]]},
+ {poster:"images/events/stanchart-nairobi.jpeg", name:"Road to StanChart Nairobi Marathon", date:"2026-10-25", time:"", place:"Nairobi, Kenya", link:"", linkText:"",
+  extra:[["Team","Gutsy Bunch 2026"]]},
+ {poster:"images/events/berlin-marathon.jpeg", name:"BMW Berlin Marathon", date:"2026-09-27", time:"", place:"Berlin, Germany", link:"", linkText:"",
+  extra:[["Distance","42.195 km"]]}
+];
 // PHOTOS: ["images/your-photo.jpg","Caption","Category"]. Leave "" for an empty slot.
 const PHOTOS=[
     ["images/saturday-run.png","Saturday run","Runs"],
