@@ -36,4 +36,10 @@ const PHOTOS=[
     ["","Tuesday session","Runs"],
     ["","Team photo","Social"]];
 const NEWS=[["21 Nov","Welcome to our new site","Runs continue as normal: Tuesday and Thursday 6 PM, Saturday 6 AM."],["Sample","Weather policy","Cancellations are posted in WhatsApp."]];
+
+const KIT=[
+ {img:"images/kit/blue-tee.jpg", name:"Blue club tee", price:"UGX 40,000", note:"Comes in S, M, L, XL. 100% cotton."},
+ {img:"images/kit/orange-tee.jpg", name:"Orange club tee", price:"UGX 40,000", note:"Comes in S, M, L, XL. 100% cotton."}
+];
+
 /* ===== END EDIT ===== */

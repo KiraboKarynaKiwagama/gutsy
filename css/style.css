@@ -273,6 +273,11 @@ h3 .ico{vertical-align:-4px;margin-right:.5rem}
 .pay small{color:var(--mute)}
 .pay .btn{margin-top:.6rem;justify-self:start;padding:.5rem 1.1rem;font-size:.9rem}
 
+/* Kit photos */
+.kit-img{border-radius:14px;overflow:hidden;background:var(--tint);display:grid;place-items:center;min-height:180px;color:var(--blue);font-weight:700;margin-bottom:.8rem}
+.kit-img img{width:100%;height:auto;display:block}
+.kit-p{margin:.2rem 0 0;font:700 1.2rem Outfit,sans-serif;color:var(--blue)}
+
 /* Events: poster cards */
 .evc{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:1.6rem;align-items:center;padding:1.2rem;margin-bottom:1.4rem;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 6px 24px #17293a0d;background:#fff}
 .evc:nth-child(even){grid-template-columns:1fr minmax(220px,340px)}
