@@ -109,6 +109,10 @@ nav .links a:hover{color:var(--blue)}
 .elev{width:100%;height:56px;display:block;margin:.6rem 0}                /* elevation graph */
 .tag{background:var(--sun);border-radius:99px;padding:.1rem .7rem;font-size:.85rem;font-weight:800}   /* "Road" label */
 
+/* Runs panels: tags */
+.panel h3 small{font:600 1rem Nunito,sans-serif;color:var(--blue);margin-left:.5rem}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0 1.2rem}
+.chips span{background:#fff;border-radius:99px;padding:.25rem .9rem;font-weight:700;font-size:.9rem;color:var(--blue)}
 
 /* ---------- 7. CARDS ---------- */
 .card{border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;box-shadow:0 6px 24px #17293a0d}
@@ -124,7 +128,6 @@ summary{font:700 1.15rem Outfit;cursor:pointer}
 form{display:grid;gap:.9rem}
 label{font-weight:700;font-size:.95rem;display:grid;gap:.25rem}
 input,select{font:inherit;padding:.7rem 1rem;border:2px solid var(--line);border-radius:14px;width:100%;background:#fff;color:var(--ink)}
-input:focus,select:focus{border-color:var(--blue);outline:0}
 .waiver{max-height:130px;overflow:auto;background:var(--tint);border-radius:14px;padding:.9rem;font-size:.92rem}   /* scrolling waiver text */
 .chk{display:flex;gap:.6rem;align-items:flex-start;font-weight:400}
 .chk input{width:auto;margin-top:.45rem}                      /* tick box */
@@ -209,6 +212,25 @@ footer .in{max-width:1080px;margin:auto;display:flex;flex-wrap:wrap;gap:2rem;jus
 .quick a:hover{transform:translateY(-4px);border-color:var(--blue)}
 .quick p{margin:.4rem 0 0;color:var(--mute)}
 
+/* Line icons */
+.ico{width:22px;height:22px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+h3 .ico{vertical-align:-4px;margin-right:.5rem}
+.checks span{display:flex;align-items:center;gap:.6rem}
+
+/* Runs page: steps and pack list */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.step{background:var(--tint);border-radius:var(--r);padding:1.4rem;position:relative}
+.step i{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--sun);color:var(--ink);font:700 1.3rem Outfit,sans-serif;font-style:normal;margin-bottom:.8rem}
+.step p{margin:.3rem 0 0;color:var(--mute);font-size:.95rem;line-height:1.5}
+/* .step:nth-child(odd){transform:rotate(1deg)}
+.step:nth-child(even){transform:rotate(-1deg)} */
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.6rem;margin-top:.8rem}
+.checks label{display:flex;align-items:center;gap:.7rem;background:#fff;border:2px solid var(--line);border-radius:14px;padding:.7rem 1rem;cursor:pointer;font-weight:600;transition:border-color .2s,background .2s}
+.checks input{width:22px;height:22px;accent-color:var(--blue);flex-shrink:0}
+.checks label:has(input:checked){background:var(--tint);border-color:var(--blue)}
+.checks input:checked+span{text-decoration:line-through;color:var(--mute)}
+
+
 /* Tilted photos on the Home page */
 .snaps{display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;padding:1rem 0}
 .snap{display:block;width:min(300px,80vw);background:#fff;padding:.7rem .7rem 0;border-radius:6px;box-shadow:0 12px 30px rgba(23,41,58,.18);text-decoration:none;color:var(--ink);text-align:center;font:600 1rem Outfit,sans-serif;transition:transform .3s}
@@ -232,6 +254,24 @@ footer .in{max-width:1080px;margin:auto;display:flex;flex-wrap:wrap;gap:2rem;jus
   .landing{background-attachment:scroll;min-height:80vh}     /* photo scrolls normally on phones */
 }
 
+/* Custom dropdown: the box you click, and the list that opens */
+.dd{position:relative}
+.dd-native{position:absolute;opacity:0;pointer-events:none;width:0;height:0;padding:0;border:0}
+.dd-btn{width:100%;text-align:left;font:inherit;font-weight:600;padding:.7rem 2.6rem .7rem 1rem;border:2px solid var(--line);border-radius:14px;color:var(--ink);cursor:pointer;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%232a7ab8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 1rem center;background-size:14px 9px}
+.dd-btn:hover,.dd.open .dd-btn{border-color:var(--blue)}
+.dd-list{display:none;position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:20;margin:0;padding:.4rem;list-style:none;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 14px 34px rgba(23,41,58,.18);max-height:260px;overflow:auto}
+.dd.open .dd-list{display:block}
+.dd-list li{padding:.65rem .9rem;border-radius:10px;cursor:pointer;font-weight:600}
+.dd-list li:hover{background:var(--tint);color:var(--blue)}
+.dd-list li[aria-selected=true]{background:var(--blue);color:#fff}
+
+/* Payment details */
+.pay{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem;margin:1.2rem 0}
+.pay>div{background:var(--tint);border-radius:16px;padding:1rem;display:grid;gap:.2rem;align-content:start}
+.pay-n{font:700 .9rem Outfit,sans-serif;color:var(--blue)}
+.pay b{font:700 1.5rem Outfit,sans-serif}
+.pay small{color:var(--mute)}
+.pay .btn{margin-top:.6rem;justify-self:start;padding:.5rem 1.1rem;font-size:.9rem}
 
 /* ---------- 19. ACCESSIBILITY ---------- */
 /* Switches off animations for people whose device asks for less motion */

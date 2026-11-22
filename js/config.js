@@ -8,10 +8,13 @@ const SOCIAL=[["Instagram","https://www.instagram.com/gutsybunch","<rect x='3' y
 ["TikTok","#","<path d='M14 4v10.500a3.500 3.500 0 1 1-3.500-3.500'/><path d='M14 4c.3 2.500 2 4 5 4.200'/>"],
 ["YouTube","#","<rect x='2.500' y='5.500' width='19' height='13' rx='4'/><path d='M10 9.500v5l4.500-2.500z'/>"],
 ["X","#","<path d='M4 4l16 16M20 4L4 20'/>"]];
-const RUNS=[["Tuesday",2,18,"6:00 PM","Oryx Petrol Station, Naalya","After-work easy miles and intervals.","TU","20261124T180000"],
-["Thursday",4,18,"6:00 PM","Oryx Petrol Station, Naalya","Tempo and hill work.","TH","20261126T180000"],
-["Saturday",6,6,"6:00 AM","Metroplex Shopping Centre, Naalya","The long run, then coffee.","SA","20261121T060000"]];
-const GROUPS=[["Easy","7:00+/km","No-drop. A leader finishes with the last runner. Start here if you’re new."],["Steady","6:00/km","5 to 8 km at a conversational pace."],["Quick","5:00/km","8 to 12 km with a pacer."],["Fast","under 4:30/km","Structured sessions on Tuesday and Thursday."]];
+const RUNS=[["Tuesday",2,18,"6:00 PM","Oryx Petrol Station, Naalya","After-work easy miles and intervals.","TU","20261124T180000",["5 km","8 km","Intervals"]],
+["Thursday",4,18,"6:00 PM","Oryx Petrol Station, Naalya","Tempo and hill work.","TH","20261126T180000",["6 km","10 km","Hills"]],
+["Saturday",6,6,"6:00 AM","Metroplex Shopping Centre, Naalya","The long run, then coffee.","SA","20261121T060000",["8 km","12 km","16 km","Coffee after"]]];
+const GROUPS=[["Easy","7:00+/km","No-drop. A leader finishes with the last runner. Start here if you’re new.","3 to 5 km","First-timers and returning runners"],
+["Steady","6:00/km","5 to 8 km at a conversational pace.","5 to 8 km","Regulars building fitness"],
+["Quick","5:00/km","8 to 12 km with a pacer.","8 to 12 km","Runners training for 10K or half marathon"],
+["Fast","under 4:30/km","Structured sessions on Tuesday and Thursday.","8 to 12 km","Racers chasing times"]];
 const EVENTS=[["2026-12-13","Club time trial, 5 km","Naalya"],["2027-01-17","Targeted race (TBC)","Kampala"],["2027-02-07","Track night and social","TBC"]];
 // PHOTOS: ["images/your-photo.jpg","Caption","Category"]. Leave "" for an empty slot.
 const PHOTOS=[
